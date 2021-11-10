@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner_1"
+    android:id="@+id/task_layout"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/task_remove"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/item_user_concern_arrow"
+        android:layout_marginLeft="17dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_remove_black_24dp" />
+    <ImageView
+            android:id="@+id/task_item_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/task_remove"
+            android:layout_marginLeft="17dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add_black_24dp" />
+    <TextView
+        android:id="@+id/item_user_concern_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:textAllCaps="true"
+        android:paddingBottom="20dp"
+        android:maxLines="1"
+        android:layout_marginLeft="20dp"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+
+        tools:text="中美经贸磋商最新进展" />
+
+
+
+    <TextView
+        android:id="@+id/item_user_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingTop="15dp"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/item_user_concern_title"
+        android:textColor="#ffff"
+
+        android:textSize="16dp"
+        android:layout_marginLeft="8dp"
+        android:text="17:38" />
+
+    <LinearLayout
+        android:id="@+id/item_user_concern_arrow"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+
+        android:paddingLeft="6dp"
+        >
+
+        <ImageView
+            android:id="@+id/item_user_concern_arrow_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_user_concern_link_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_user_time"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/shape_reactange_light_white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/task_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</RelativeLayout>

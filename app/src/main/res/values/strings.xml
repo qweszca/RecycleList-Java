@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ExpandableView</string>
+    <string name="tasks_name">任务列表</string>
+</resources>
